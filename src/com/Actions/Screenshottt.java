@@ -2,6 +2,7 @@ package com.Actions;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.Duration;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -19,6 +20,8 @@ public static void main(String[] args) throws IOException {
 		
 		driver.get("https://www.facebook.com/");
 
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		
 TakesScreenshot ts = (TakesScreenshot) driver; 
 
 File screenshotAs = ts.getScreenshotAs(OutputType.FILE);

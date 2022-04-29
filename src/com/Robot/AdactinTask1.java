@@ -3,6 +3,7 @@ package com.Robot;
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
+import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -63,7 +64,7 @@ public class AdactinTask1 {
 		robot.keyPress(KeyEvent.VK_ENTER);
 		robot.keyRelease(KeyEvent.VK_ENTER);
 		
-		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		
 		
 	}
